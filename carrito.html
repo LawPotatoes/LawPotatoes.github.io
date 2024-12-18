@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reseñas de Productos</title>
+    <title>Carrito de Compras</title>
     <link rel="icon" href="images/iconoPagina.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 <body>
     <main class="contenedor">
         <header>
-            <h1>Reseñas de Productos</h1>
+            <h1>Carrito de Compras</h1>
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #007BFF;">
                 <a class="navbar-brand" href="index.html" style="color: #fff;"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,22 +34,26 @@
             </nav>
         </header>
 
-        <h2 class="descripServicios">Lee las reseñas de nuestros productos agregados desde la API.</h2>
+        <h2 class="descripServicios">Aquí puedes revisar los productos que has añadido a tu carrito.</h2>
 
-        <!-- Contenedor para las reseñas con un diseño similar al de productos -->
-        <div class="container mt-5">
-            <div class="row" id="productos-reseñas">
-                <!-- Las reseñas se agregarán aquí dinámicamente con JS -->
-                <!-- Ejemplo de una tarjeta de reseña -->
-                <!-- Cada tarjeta será una columna en el grid responsivo -->
-            </div>
+        <!-- Contenedor para los productos en el carrito -->
+        <div id="carrito-contenedor" class="productos-container"></div>
+
+        <!-- Total del carrito -->
+        <div class="total">
+            <h3>Total: $<span id="total-carrito">0.00</span></h3>
+        </div>
+
+        <div class="actions">
+            <button id="vaciar-carrito" class="btn btn-danger">Vaciar Carrito</button>
+            <button id="comprar" class="btn btn-success">Comprar</button>
         </div>
 
         <footer>
-            <p>© 2024 Baños El Bañin</p>
+            <p>© 2024 MegaShop</p>
         </footer>
     </main>
-
-    <script src="reseñas.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>

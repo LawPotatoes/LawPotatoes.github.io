@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios</title>
+    <title>Productos</title>
     <link rel="icon" href="images/iconoPagina.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
@@ -13,56 +16,37 @@
 <body>
     <main class="contenedor">
         <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="reseñas.html">Reseñas</a></li>
-                    <li><a href="formulario.html">Formulario de Contacto</a></li>
-                </ul>
+            <h1>Productos</h1>
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #007BFF;">
+                <a class="navbar-brand" href="index.html" style="color: #fff;"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"> <a class="nav-link" href="index.html" style="color: #fff;">Inicio</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="productos.html" style="color: #fff;">Productos</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="reseñas.html" style="color: #fff;">Reseñas</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="formulario.html" style="color: #fff;">Formulario de Contacto</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="carrito.html" style="color: #fff;">Carrito</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
-        <h2 class="descripServicios">Aquí coloqué una imagen con enlace de compra de productos. Al hacer clic, te lleva a una tienda externa.</h2>
-        <div class="grid-container">
 
-            <div class="producto">
-                <a href="https://www.mercadolibre.com.ar/asiento-tapa-inodoro-capea-italiana-original-blanco-pvc/p/MLA26684656#polycard_client=search-nordic&wid=MLA1490753822&sid=search&searchVariation=MLA26684656&position=4&search_layout=grid&type=product&tracking_id=522f8f0f-7c08-4a73-aeb8-2459dd1075b3" target="_blank">
-                    <img src="images/D_NQ_NP_747792-MLU74129872473_012024-O.webp" alt="Producto 1" class="grid-item">
-                </a>
-                <div class="descripcion">Una excelente tapa de inodoro, suave, cómoda y blanca al mejor precio. Pulsa la imagen para comprar.</div>
-            </div>
+        <h2 class="descripServicios">Aquí verás nuestros productos organizados en cards. Haz clic en ellos para más detalles.</h2>
 
+        <!-- Contenedor para los productos (Cards) -->
+        <div id="productos-lista" class="productos-container"></div>
 
-            <div class="producto">
-                <a href="https://www.mercadolibre.com.ar/inodoro-largo-capea-italiana-blanco-deposito-capea-italiana-blanco/p/MLA28036403#polycard_client=search-nordic&wid=MLA1574053170&sid=search&searchVariation=MLA28036403&position=2&search_layout=grid&type=product&tracking_id=7b87afe2-e913-4fbf-b366-6f470bde9a73" target="_blank">
-                    <img src="images/hinodoro.webp" alt="Producto 2" class="grid-item">
-                </a>
-                <div class="descripcion">Inodoro largo CAPEA ITALIANA BLANCO
-                    el más fino de toda la toscana.</div>
-            </div>
-
-
-            <div class="producto">
-                <a href="https://articulo.mercadolibre.com.ar/MLA-1130084065-bidematic-fria-1020-dispositivo-bidet-derecho-para-inodoro-_JM#polycard_client=search-nordic&position=7&search_layout=grid&type=item&tracking_id=8e0b2cd9-78f1-4d5c-952a-f3050a17da42" target="_blank">
-                    <img src="images/bidematic.webp" alt="Producto 3" class="grid-item">
-                </a>
-                <div class="descripcion">Bidematic Fría 1020 Dispositivo Bidet, para tener la colita bien limpia.</div>
-            </div>
-
-
-            <div class="producto">
-                <a href="https://articulo.mercadolibre.com.ar/MLA-1396566859-juego-de-griferias-sanitario-bidet-ferrum-duchon-bano-mueble-_JM#polycard_client=search-nordic&position=22&search_layout=grid&type=item&tracking_id=83588316-3788-45d1-a7c8-30b209429087" target="_blank">
-                    <img src="images/juegoCompleto.webp" alt="Producto 3" class="grid-item">
-                </a>
-                <div class="descripcion">para los que no quieren perder tiempo en elegir y solo quieren tener un baño envidiable.</div>
-            </div>
-        
-        
-        </div>
+        <!-- Contenedor para los datos obtenidos de la API -->
+        <div id="api-datos" class="productos-container"></div>
 
         <footer>
-            <p>© 2024 Baños El Bañin</p>
+            <p>© 2024 MegaShop</p>
         </footer>
     </main>
+    
+    <script src="script.js"></script>
 </body>
 </html>
